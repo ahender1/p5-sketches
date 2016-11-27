@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+
+    <script src="whitneywise.js" type="text/javascript"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    
+    <script>
+    $(document).ready(function(){
+    $('#mydiv').hide()
+        $("button").click(function(){
+            $('#mydiv').toggle();
+    if ($.trim($(this).text()) === 'Show Code') {
+        $(this).text('Hide Code');
+    } else {
+        $(this).text('Show Code');        
+    }
+        });
+    });
+    </script>
+
+    <style> 
+    body {background-color: black; padding: 0; margin: 0;} 
+    canvas {vertical-align: top;} 
+    p {color: black; background-color:#fae; font-size:20px; border-radius:5px; padding:2px}
+	a:link {color: black;}
+	a:visited {color: black;}
+    </style>
+  </head>
+  <body>
+
+  <p STYLE="position:absolute; TOP:0px; LEFT:15px;">
+  <a href = "whitneywise.html">Clear Screen</a></p>
+
+  <p STYLE="position:absolute; TOP:0px; LEFT:150px;">
+  <a href = "whitneysprung.html">Try a Different Sketch</a></p>
+  
+  <p style="position:absolute; bottom:0px; left: 15px;">Coded by Whitney Wise '22 &nbsp;&nbsp;&nbsp;
+  <button style="font-size:17px;">Show Code</button></p>
+ 
+ 
+ 
+ 
+ <!-----------------CODE BELOW--------------------!>
+  <div id = "mydiv" style = "position:absolute; bottom:100px; left: 15px; color: black; background-color: #fae; padding: 5px; border-radius: 5px">
+ 
+function setup() {<br>
+ createCanvas(5000,5000);<br>
+background('#fae')<br>
+}<br>
+<br>
+<br>
+function draw() {<br>
+ <br>
+ stroke('rgba(0,255,0,0.25)');<br>
+strokeWeight(4);<br>
+rect(20, 20, 60, 60);<br>
+if (mouseIsPressed) {<br>
+ fill(0);<br>
+ } else {<br>
+ fill(22,37);<br>
+ }<br>
+ ellipse(mouseX, mouseY, 80, 80);<br>
+}<br>
+<br>
+
+ </div>
+
+  </body>
+</html>
